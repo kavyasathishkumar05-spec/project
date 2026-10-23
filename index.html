@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUNA Boutique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="announcement">
+    FREE SHIPPING ON ORDERS OVER ₹999
+  </div>
+
+  <header class="navbar">
+    <a href="#home" class="logo">LUNA
+      <small>B O U T I Q U E</small>
+    </a>
+
+    <nav id="navigation">
+      <a href="#new">NEW ARRIVALS</a>
+      <a href="#new" data-filter="Clothing">CLOTHING</a>
+      <a href="#new" data-filter="Dresses">DRESSES</a>
+      <a href="#new" data-filter="Shoes">SHOES</a>
+      <a href="#new" data-filter="Accessories">ACCESSORIES</a>
+      <a href="#new" data-filter="Sale">SALE</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+
+    <button id="searchToggle" aria-label="Search">⌕</button>
+    <button id="cartToggle">Bag (<span id="cartCount">0</span>)</button>
+    <button id="menuToggle" aria-label="Menu">☰</button>
+  </header>
+
+  <div class="search-panel" id="searchPanel" hidden>
+    <input id="searchInput" placeholder="Search dresses, bags, shoes...">
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">NEW SEASON, NEW YOU</p>
+        <h1>Effortless Style.<br>Every Day.</h1>
+        <p>Timeless pieces designed to make you<br>
+          look and feel your best.</p>
+        <a class="btn" href="#new">SHOP NEW ARRIVALS</a>
+        <a class="btn outline" href="#new" data-filter="Dresses">
+          SHOP DRESSES
+        </a>
+      </div>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85"
+             alt="Elegant neutral fashion collection">
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div>♧ <span><b>FREE SHIPPING</b><small>On orders over ₹999</small></span></div>
+      <div>⟳ <span><b>EASY RETURNS</b><small>30-day hassle-free returns</small></span></div>
+      <div>♡ <span><b>LUNA REWARDS</b><small>Earn points as you shop</small></span></div>
+      <div>♙ <span><b>SECURE SHOPPING</b><small>Safe shopping experience</small></span></div>
+    </section>
+
+    <section class="collection" id="new">
+      <div class="section-heading">
+        <p class="eyebrow">THE LATEST EDIT</p>
+        <h2>NEW ARRIVALS</h2>
+        <p>Discover your new favourites.</p>
+      </div>
+      <div class="products" id="products"></div>
+      <p id="emptyMessage" hidden>No products found.</p>
+    </section>
+
+    <section class="promotions">
+      <div class="promo promo-one">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+             alt="Summer fashion">
+        <div>
+          <p class="eyebrow">SUNNY DAYS AHEAD</p>
+          <h2>Summer<br>Essentials</h2>
+          <a href="#new">SHOP THE COLLECTION →</a>
+        </div>
+      </div>
+
+      <div class="promo promo-two">
+        <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=900&q=80"
+             alt="Summer accessories">
+        <div>
+          <p class="eyebrow">FINISH YOUR LOOK</p>
+          <h2>Accessorize<br>Your Look</h2>
+          <a href="#new" data-filter="Accessories">SHOP ACCESSORIES →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="about">
+      <div><span>♡</span><h3>LOVE LUNA?</h3>
+        <p>Discover your next favourite look.</p></div>
+      <div><span>✉</span><h3>GET 10% OFF</h3>
+        <p>Sign up for our latest updates.</p></div>
+      <form id="newsletterForm">
+        <h3>STAY IN THE KNOW</h3>
+        <p>Fashion inspiration, delivered to you.</p>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">SUBSCRIBE</button>
+        <small id="newsletterMessage"></small>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div><h3>SHOP</h3><a href="#new">New Arrivals</a>
+      <a href="#new">Clothing</a><a href="#new">Dresses</a>
+      <a href="#new">Accessories</a></div>
+    <div><h3>CUSTOMER CARE</h3><a href="#about">Contact Us</a>
+      <a href="#about">Shipping</a><a href="#about">Returns</a></div>
+    <div><h3>ABOUT LUNA</h3><a href="#about">Our Story</a>
+      <a href="#about">Sustainability</a></div>
+    <div><h3>FOLLOW US</h3><p>Instagram · Pinterest · TikTok</p></div>
+    <p class="copyright">© 2026 LUNA Boutique. Student portfolio project.</p>
+  </footer>
+
+  <aside id="cartPanel" class="cart-panel" hidden>
+    <button id="closeCart" class="close-cart">✕ Close</button>
+    <h2>Your Shopping Bag</h2>
+    <div id="cartItems"></div>
+    <h3>Subtotal: ₹<span id="subtotal">0</span></h3>
+    <button id="checkout">Continue to checkout</button>
+    <p id="checkoutMessage">Demo store. No real payment is processed.</p>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
