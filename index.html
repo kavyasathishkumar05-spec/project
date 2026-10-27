@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kavya's personal student portfolio and web development projects">
+    <title>Kavya | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="brand">
+                <span class="brand-mark">KS</span>
+                <span>Kavya</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle"
+                        aria-label="Switch to dark theme">🌙</button>
+                <a href="#contact" class="talk-btn">Let's talk</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero / Profile Section -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+
+                    <h1>
+                        Hi, I'm Kavya<br>
+                        I build thoughtful<br>
+                        digital experiences<span class="hero-dot">.</span>
+                    </h1>
+
+                    <div class="hero-lines" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <p class="hero-description">
+                        I'm a student and aspiring web developer.
+                        I enjoy learning new technologies and creating
+                        attractive, responsive, and user-friendly websites.
+                    </p>
+
+                    <a href="#projects" class="work-btn">
+                        View my work <span>→</span>
+                    </a>
+                </div>
+
+                <div class="hero-image">
+                    <div class="profile-circle"></div>
+
+                <img src="img/profile.jpg"
+                         alt="Kavya's profile photo"
+                         class="profile-photo"
+                         onerror="this.style.display='none';
+                         document.getElementById('photoFallback').hidden=false;">
+
+                    <div class="photo-fallback" id="photoFallback" hidden>
+                        <span>KS</span>
+                        <p>Add images/profile.jpg</p>
+                    </div>
+
+                    <span class="decoration decoration-one"></span>
+                    <span class="decoration decoration-two"></span>
+                    <span class="decoration decoration-three"></span>
+
+                    <div class="plant" aria-hidden="true">🌿</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">WHAT I'VE BEEN CREATING</p>
+                        <h2>Projects</h2>
+                        <span class="heading-line"></span>
+                    </div>
+
+                    <div class="project-filters" aria-label="Filter projects">
+                        <button class="filter-btn active"
+                                data-filter="all" aria-pressed="true">All</button>
+                        <button class="filter-btn"
+                                data-filter="web" aria-pressed="false">Web</button>
+                        <button class="filter-btn"
+                                data-filter="design" aria-pressed="false">Design</button>
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card" data-category="web">
+                        <div class="project-art recipe-art">
+                            <div class="mock-window">
+                                <span class="mock-search">⌕ &nbsp; Search recipes</span>
+                                <div class="food-emoji">🥗 🍓 🥑</div>
+                                <div class="food-row">
+                                    <span>🥙</span><span>🥗</span><span>🍪</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div>
+                                <h3>Recipe Finder</h3>
+                                <p>A sample interface for exploring food recipes.</p>
+                                <p class="tools">HTML · CSS · JavaScript</p>
+                            </div>
+                            <button class="project-arrow details-btn"
+                                    aria-label="Show Recipe Finder details"
+                                    aria-expanded="false">→</button>
+                            <p class="extra-details" hidden>
+                                I practised creating a search-style layout,
+                                arranging content, and designing recipe cards.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web">
+                        <div class="project-art study-art">
+                            <div class="planner-window">
+                                <div class="planner-sidebar">☰<br><br>◉<br>◉<br>◉</div>
+                                <div class="planner-content">
+                                    <span>My Study Planner</span>
+                                    <p>🔵 &nbsp; Daily tasks</p>
+                                    <p>🟢 &nbsp; Assignments</p>
+                                    <p>🟠 &nbsp; Revision</p>
+                                    <p>🟣 &nbsp; Study goals</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div>
+                                <h3>Study Planner</h3>
+                                <p>A sample page for organising study tasks.</p>
+                                <p class="tools">HTML · CSS · JavaScript</p>
+                            </div>
+                            <button class="project-arrow details-btn"
+                                    aria-label="Show Study Planner details"
+                                    aria-expanded="false">→</button>
+                            <p class="extra-details" hidden>
+                                I practised organising information into a
+                                clean dashboard-style interface.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="design">
+                        <div class="project-art travel-art">
+                            <div class="travel-window">
+                                <aside>TRAVEL<br><br>Explore<br><br>Places</aside>
+                                <div class="travel-photos">
+                                    <span>🏞️</span>
+                                    <span>🏖️</span>
+                                    <span>🏝️</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div>
+                                <h3>Travel Journal</h3>
+                                <p>A visual layout for displaying travel memories.</p>
+                                <p class="tools">HTML · CSS</p>
+                            </div>
+                            <button class="project-arrow details-btn"
+                                    aria-label="Show Travel Journal details"
+                                    aria-expanded="false">→</button>
+                            <p class="extra-details" hidden>
+                                I practised using visual sections, spacing,
+                                colors, and responsive card layouts.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="project-note">
+                    These are sample projects. Replace them with your own work
+                    before submitting your portfolio.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="container about-layout">
+                <div>
+                    <p class="eyebrow">A LITTLE ABOUT ME</p>
+                    <h2>Curious mind.<br>Creative approach.</h2>
+                    <span class="heading-line"></span>
+                </div>
+
+                <div class="about-card">
+                    <p>
+                        I'm Kavya, a student interested in web development
+                        and technology. I enjoy learning how websites work
+                        and turning ideas into simple digital experiences.
+                    </p>
+                    <p>
+                        I'm currently developing my HTML, CSS, JavaScript,
+                        problem-solving, and design skills. My goal is to
+                        keep learning and build useful websites that are
+                        easy for everyone to use.
+                    </p>
+                    <a href="#contact" class="text-link">Let's connect →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <p class="eyebrow">TOOLS I AM LEARNING</p>
+                <h2>Skills</h2>
+                <span class="heading-line"></span>
+
+                <div class="skills-list">
+                    <div class="skill-pill">
+                        <span class="skill-icon html-icon">5</span>
+                        <span>HTML</span>
+                    </div>
+
+                    <div class="skill-pill">
+                        <span class="skill-icon css-icon">3</span>
+                        <span>CSS</span>
+                    </div>
+
+                    <div class="skill-pill">
+                        <span class="skill-icon js-icon">JS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="skill-pill">
+                        <span class="skill-icon teamwork-icon">✦</span>
+                        <span>Teamwork</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="container contact-layout">
+                <div>
+                    <p class="eyebrow">HAVE A QUESTION?</p>
+                    <h2>Let's talk.</h2>
+                    <p class="contact-intro">
+                        I'd love to hear from you. Feel free to get in touch.
+                    </p>
+
+                    <a class="email-link"
+                       href="mailto:kavyasathishkumar05@gmail.com">
+                        kavyasathishkumar05@gmail.com
+                    </a>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <label for="name">Your name</label>
+                    <input id="name" name="name" type="text"
+                           placeholder="Enter your name" required>
+
+                    <label for="email">Your email</label>
+                    <input id="email" name="email" type="email"
+                           placeholder="Enter your email" required>
+
+                    <label for="message">Your message</label>
+                    <textarea id="message" name="message" rows="4"
+                              placeholder="Write your message"
+                              required></textarea>
+
+                    <button class="work-btn" type="submit">
+                        Submit message →
+                    </button>
+
+                    <p id="formMessage" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© <span id="year"></span> Kavya</p>
+            <a href="#home">Back to home ↑</a>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top"
+            aria-label="Back to top" title="Back to top">↑</button>
+
+</body>
+</html>
